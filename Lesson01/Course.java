@@ -59,10 +59,6 @@ class MainCourse {
         for (Course c : course) {
             for (Competitor t: team.player) {
                 c.doIt(t);
-                if (!t.isOnDistance())
-                {
-                    break;
-                }
             }
         }
 
