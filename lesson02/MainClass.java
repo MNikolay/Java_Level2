@@ -28,16 +28,22 @@ public class MainClass {
 
     public static void main(String[] arg)
     {
+        boolean res=false;
+        int i=0;
         String[][] arr =  {{"1","1","1","1"},
                         {"1","1","1","1"},
-                        {"1","C","1","1"},
+                        {"1","2","1","1"},
                         {"1","1","1","1"}};
         try {
-            System.out.println(method(arr));
+            i = method(arr);
+            res=true;
         }
         catch (MyArraySizeException | MyArrayDataException e )
         {
             e.printStackTrace();
+        }
+        finally {
+            System.out.println("Результат:" + (res ? i : "запуск метода закончился ошибкой"));
         }
 
     }
